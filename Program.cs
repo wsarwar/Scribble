@@ -10,10 +10,42 @@ namespace Scribble
     {
         static void Main(string[] args)
         {
-            RunStopwatch();
+            RunStack();
+            //RunInheritance();
+            //RunStopwatch();
             //RunStackOverflowPost();
 
             Console.ReadLine();
+        }
+
+        private static void RunStack()
+        {
+            var stack = new Stack();
+            //Console.WriteLine(stack.Pop());
+           
+            //stack.Push(null);
+            stack.Push(1);
+            stack.Push(2);
+            stack.Clear();
+            stack.Push(3);
+            stack.Push("apple");
+            stack.Push(DateTime.Now);
+
+            Console.WriteLine(stack.Pop());
+            Console.WriteLine(stack.Pop());
+            Console.WriteLine(stack.Pop());
+            Console.WriteLine(stack.Pop());
+
+        }
+
+        private static void RunInheritance()
+        {
+            var text = new Text();
+            //text.AddHyperLink("google.co.uk");
+            text.Height = 100;
+            text.Width = 400;
+            text.Copy();
+
         }
 
         private static void RunStackOverflowPost()
